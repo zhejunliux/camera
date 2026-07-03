@@ -1,2 +1,4 @@
 photos.json
+static/photos/_web/
+node_modules/
 .DS_Store

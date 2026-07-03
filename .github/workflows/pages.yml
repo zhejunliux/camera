@@ -25,7 +25,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0   # full history so git log can date each photo
-      - name: Build gallery manifest
+      - name: Install sharp (image compression)
+        run: npm install --no-save sharp
+      - name: Build gallery manifest (scan + compress)
         run: node build-manifest.mjs
       - name: Setup Pages
         uses: actions/configure-pages@v5
